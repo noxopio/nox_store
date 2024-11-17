@@ -1,0 +1,221 @@
+@use 'mixin';
+
+@font-face {
+  font-family: 'Marske';
+  src: url('/Marske/Marske.otf') format('truetype');
+  font-style: italic;
+  font-weight: bold;
+}
+
+body {
+  font-family: 'Marske';
+  background-color: #ccbab5;
+  /*  background-image: url("/ai.jpg");
+  background-size: cover;
+  background-repeat: round; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #000000;
+
+
+
+}
+
+button {
+  position: absolute;
+
+  color: #9e0000;
+  background-color: #000000;
+
+}
+
+button:active {
+  content: "<img src=""> ";
+
+  color: #ffffff;
+}
+
+button:visited {
+  color: greenyellow;
+}
+
+/* span::before{
+    content: " ";
+
+    
+    color: blueviolet;
+} */
+
+/* p:hover::before {
+    content: "💅";
+} */
+input:in-range {
+  background-color: rgba(114, 245, 114, 0.25);
+}
+
+input:out-of-range {
+  background-color: rgba(245, 128, 128, 0.25);
+  border: 2px solid red;
+}
+
+input:in-range+p::after {
+  content: 'Mayor de edad. 🚀';
+}
+
+input:out-of-range+p::after {
+  content: 'Menor de edad. 🙈';
+}
+
+.paragraph {
+  position: absolute;
+  top: 1px;
+  z-index: 0;
+  ;
+  margin-left: 0;
+  height: auto;
+  transition: 3s ease;
+  width: auto;
+
+  &__title {
+
+    max-width: 4rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    transition: all 3s ease;
+    overflow: hidden;
+
+    box-shadow: 1px 1px 1px rgba(204, 185, 185, 0.808);
+
+    &::first-letter {
+      font-size: 4rem;
+      color: #9e0000;
+
+    }
+
+
+    &--1 {
+
+      z-index: 0;
+      position: absolute;
+    bottom: 20rem;
+   
+      margin: -8rem 80vw;
+      height: auto;
+      max-width: 4rem;
+      white-space: nowrap;
+      text-transform: uppercase;
+      writing-mode: vertical-lr;
+      text-orientation:sideways;
+      transition: all 3s ease;
+      box-shadow: 1px 1px 1px rgba(204, 185, 185, 0.808);
+
+      border-left: thick solid hsl(3, 53%, 54%);
+      height:20%;
+      left: 50%;
+      position: absolute;
+
+
+
+
+      &::first-letter {
+        font-size: 4rem;
+        color: #9e0000;
+
+      }
+
+
+
+
+
+
+    }
+  }
+
+
+}
+
+
+
+
+
+
+header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  margin: auto 400px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+button:active {
+  color: rgb(93, 12, 199);
+}
+
+.image {
+  display: flex;
+  margin: auto 25vw;
+  height: 60vh;
+  width: 50vw;
+
+  img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 60%;
+    transition: .5s ease;
+  }
+
+  :hover {
+    cursor: crosshair;
+    width: 20vw;
+    opacity: 1;
+    z-index: 3;
+    transform: scale3d(1, 1.2, 0.3);
+    border: 2px solid blueviolet;
+    box-shadow: 2px 2px 10px blueviolet;
+    filter: contrast(120%);
+  }
+}
+
+figure {
+  z-index: 4;
+  position: sticky;
+top: 1rem;
+  margin-left: 5rem;
+
+  img {
+    height: 10rem;
+    width: 15rem;
+  }
+
+}
+
+span {
+  word-wrap: break-word;
+  font-size: 2vw;
+  margin: 2vh auto;
+  width: 70ch;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 8px 1px 10px rgba(224, 15, 15, 0.808);
+  }
+
+}
+
+.robot {
+  z-index: 5;
+  position: sticky;
+  top: 0;
+  display: block;
+   margin: auto 5rem;
+
+}
